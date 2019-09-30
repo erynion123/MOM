@@ -1,0 +1,50 @@
+<div class="meals container">
+
+  <div class="filters">
+    <div class="days">
+      <div class="day">
+        <span>Today</span>
+      </div>
+      <div class="day">
+        <span>Tomorrow</span>
+      </div>
+      <div class="day">
+        <span>Day after</span>
+      </div>
+    </div>
+
+    <div class="preference">
+      <label class="switch">
+        <input type="checkbox" [checked]="!type" (click)="type = !type">
+        <span class="slider"></span>
+      </label>
+      <span class="text" *ngIf="type">Veg Only</span>
+    </div>
+  </div>
+
+  <div class="menus">
+    <div class="menu-box" *ngFor="let menu of menus">
+      <div class="menu-header">
+        {{menu.name}}
+      </div>
+      <div class="menu-body">
+        <div class="menu-img">
+          <img src="assets/food/1.jpg" height="180px" width="160px" alt="">
+        </div>
+        <div class="menu-items">
+          <ul class="item-list">
+            <li class="item" *ngFor="let item of menu.items">
+              <p>{{item.name}}</p>
+              <span>{{item.description}}</span>
+              <hr>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="menu-footer">
+        <button type="button" name="button">Order Now</button>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,49 @@
+<div class="home-wrapper">
+
+  <!-- Home carousel -->
+
+  <carousel class="home-banners">
+    <slide class="banner">
+      <div class="content" [ngStyle]="{'background-image': 'url(assets/banner/scene1.jpg)'}">
+        <h1>Get 3 days trial pack at just Rs180, for first 100 customers everyday.</h1>
+        <button type="button" class="text-uppercase">Try 3 days trail</button>
+        <span>Choose one plan and order anything</span>
+      </div>
+    </slide>
+  </carousel>
+
+  <div class="home-body">
+
+    <div class="tab-menu">
+      <div class="item">
+        <div class="logo">
+          <img src="assets/icons/subscription.png" height="50px" width="60px">
+        </div>
+        <p class="text-uppercase">Subscription</p>
+      </div>
+      <div class="item" (click)="goToMenu()">
+        <div class="logo">
+          <img src="assets/icons/menu.png" height="35px" width="40px">
+        </div>
+        <p class="text-uppercase">Today's Menu</p>
+      </div>
+      <div class="item">
+        <div class="logo">
+          <img src="assets/icons/bulk.png" height="50px" width="130px">
+        </div>
+        <p class="text-uppercase">Team Order</p>
+      </div>
+      <div class="item">
+        <div class="logo">
+          <img src="assets/icons/barcode.png" height="45px" width="50px">
+        </div>
+        <p class="text-uppercase">Pricing</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Load view here -->
+  <router-outlet></router-outlet>
+  <!-- Load view here -->
+
+</div>

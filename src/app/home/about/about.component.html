@@ -1,0 +1,83 @@
+<div class="about-wrapper">
+  <div class="header">
+    <h3>Why Us?</h3>
+  </div>
+  <div class="template d-flex align-items-stretch">
+    <div class="image">
+      <span class="caption">Buy One plan and order anything</span>
+      <img src="assets/home/order.png">
+    </div>
+    <div class="data">
+      <div class="data-box">
+        <span class="caption text-uppercase">Mom 1 day trial</span>
+        <span class="value">Days - 1</span>
+        <span class="value">Credits - 11</span>
+        <button type="button" name="button">Pay</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="template d-flex align-items-stretch">
+    <div class="data">
+      <div class="data-box">
+        <span class="caption text-uppercase">Mom Basic pack</span>
+        <span class="value">Days - 3</span>
+        <span class="value">Credits - 34</span>
+        <button type="button" name="button">Pay Rs.400</button>
+      </div>
+    </div>
+    <div class="image right">
+      <span class="caption">Quality ingredients selected & prepared by professional chefs</span>
+      <img src="assets/home/kitchen.jpg">
+    </div>
+  </div>
+
+  <div class="template d-flex align-items-stretch">
+    <div class="image">
+      <span class="caption">way cheaper than any home cook or other online platform</span>
+      <img src="assets/home/cost.png">
+    </div>
+    <div class="data">
+      <div class="data-box">
+        <span class="caption text-uppercase">Mom weekly bag</span>
+        <span class="value">Days - 7</span>
+        <span class="value">Credits - 77</span>
+        <button type="button" name="button">Pay Rs.840</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="template d-flex align-items-stretch">
+    <div class="data">
+      <div class="data-box">
+        <span class="caption text-uppercase">Mom monthly value</span>
+        <span class="value">Days - 30</span>
+        <span class="value">Credits - 314</span>
+        <button type="button" name="button">Pay Rs.3450</button>
+      </div>
+    </div>
+    <div class="image right">
+      <span class="caption">Always deliver more than expected on time</span>
+      <img src="assets/home/time.jpg">
+    </div>
+  </div>
+
+  <div class="team-banner">
+    <h1>The team that eats together, stays together</h1>
+    <button type="button">Calculate best price for your team</button>
+  </div>
+
+  <div class="faq">
+    <h1>Frequently asked questions</h1>
+
+    <div class="question" *ngFor="let question of questions;let i = index;">
+      <div class="q">
+        <span>{{i + 1}}. {{question.q}}<i class="fa fa-plus" (click)="question.show = true"></i></span>
+      </div>
+      <div class="a" [hidden]="!question.show">
+        <span>{{question.a}}</span>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,11 @@
+@import "mixins.scss";
+@import "variables.scss";
+@import "base.scss";
+
+
+@import "./app/home/home.component";
+@import "./app/home/about/about.component";
+@import "./app/home/subs/subs.component";
+@import "./app/home/menu/menu.component";
+@import "./app/home/team/team.component";
+@import "./app/home/price/price.component";

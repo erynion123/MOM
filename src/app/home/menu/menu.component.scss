@@ -1,0 +1,104 @@
+.meals{
+  width: 80%;
+  .filters{
+    display: flex;
+    margin-top: 15px;
+    align-items: center;
+    justify-content: space-between;
+    .days{
+      height: 60px;
+      display: flex;
+      align-items: center;
+      .day{
+        padding: 0 20px 10px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        &.active,&:hover{
+          border-bottom: 2px solid;
+        }
+      }
+    }
+
+    .preference{
+      display: flex;
+      align-items: center;
+      @include toggle-switch;
+      .text{
+        font-size: 14px;
+        font-weight: bold;
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .menus{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .menu-box{
+      border: 1px solid #d3d5df;
+      box-shadow: 0 4px 7px 0 rgba(218, 220, 230, 0.6);
+      height: 300px;
+      width: 510px;
+      margin-bottom: 50px;
+      display: flex;
+      flex-direction: column;
+      .menu-header{
+        height: 50px;
+        border-bottom: 1px solid #d3d5df;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+      }
+      .menu-body{
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+        .menu-img{
+          width: 40%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .menu-items{
+          width: 60%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .item-list{
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 0;
+            text-align: center;
+            .item{
+              p{
+                font-weight: bold;
+                margin-bottom: 0;
+              }
+              hr{
+                margin: 15px 50px 5px;
+                background-color: black;
+              }
+            }
+          }
+        }
+      }
+      .menu-footer{
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button{
+          background: red;
+          width: 120px;
+          color: #fff;
+          border: 1px solid black;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
