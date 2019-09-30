@@ -7,7 +7,7 @@ import { DataService } from 'src/app/shared/services/data.service';
 })
 export class MenuComponent implements OnInit {
   menus: any;
-
+  type:any;
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
