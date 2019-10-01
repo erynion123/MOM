@@ -10,6 +10,7 @@ import { PriceComponent } from './price/price.component';
 import { TeamComponent } from './team/team.component';
 import { SubsComponent } from './subs/subs.component';
 import { TabsModule } from 'ngx-bootstrap/tabs';
+import { HeaderComponent } from '../shared/components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
     MenuComponent,
     PriceComponent,
     TeamComponent,
-    SubsComponent
+    SubsComponent,
+    HeaderComponent
   ],
   imports: [
     HomeRoutingModule,

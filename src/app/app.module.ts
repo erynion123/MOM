@@ -6,14 +6,14 @@ import { AppComponent } from './app.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { FormsModule} from '@angular/forms';
 import { HomeModule } from './home/home.module';
-import { HeaderComponent } from './shared/components/header/header.component';
 import { DataService } from './shared/services/data.service';
 import { HttpClientModule } from '@angular/common/http';
+import { IntroComponent } from './intro/intro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    IntroComponent
   ],
   imports: [
     BrowserModule,

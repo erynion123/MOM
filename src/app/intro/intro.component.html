@@ -1,0 +1,41 @@
+<div class="intro-wrapper">
+  <div class="intro-header">
+    <img src="assets/logo/diet-vector.png" alt="" height="200px" width="350px">
+  </div>
+  <div class="intro-body">
+    <div class="banner">
+      <h1>Hi, Welcome to D'et (Daily Eat Kitchen)</h1>
+      <div class="text">
+        <p>We'll launch subscribtion and delivery service soon, But meanwhile, check out our menu and order through whatsapp or call</p>
+        <img src="assets/intro/whatsapp.png" height="70px">
+      </div>
+    </div>
+    <div class="menus container">
+      <div class="menu" *ngFor="let menu of menus">
+        <div class="img">
+          <img src="{{menu.img}}" alt="" height="250px" width="400px">
+        </div>
+        <div class="data">
+          <div class="name" *ngIf="menu.name">
+            {{menu.name}}
+          </div>
+          <div class="items" *ngIf="menu.items">
+            <span class="item" *ngFor="let item of menu.items">{{item}}</span>
+          </div>
+          <div class="sides" *ngIf="menu.sides && menu.sides.length > 0">
+            <div class="label">
+              Sides -
+            </div>
+            <div class="value">
+              <span class="side" *ngFor="let side of menu.sides">{{side}}</span>
+            </div>
+          </div>
+          <div class="price">
+            Price - Rs {{menu.price}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
