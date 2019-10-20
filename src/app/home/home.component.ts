@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
   type:Boolean = true;
   constructor(
-    private router: Router
+    private router: Router,
   ) { }
 
   ngOnInit() {
@@ -16,6 +16,10 @@ export class HomeComponent implements OnInit {
 
   goToMenu(){
     this.router.navigate(['menu']);
+  }
+
+  goToSubs(){
+    this.router.navigate(['']);
   }
 
 }
