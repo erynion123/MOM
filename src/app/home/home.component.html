@@ -15,26 +15,26 @@
 
   <div class="home-body">
 
-    <div class="tab-menu" (click)="goToSubs()">
-      <div class="item">
+    <div class="tab-menu">
+      <div class="item {{selectedTab == 0 ? 'active': ''}}" (click)="goToSubs()">
         <div class="logo">
           <img src="assets/icons/subscription.png" height="50px" width="60px">
         </div>
         <p class="text-uppercase">Subscription</p>
       </div>
-      <div class="item" (click)="goToMenu()">
+      <div class="item {{selectedTab == 1 ? 'active': ''}}" (click)="goToMenu()">
         <div class="logo">
           <img src="assets/icons/menu.png" height="35px" width="40px">
         </div>
         <p class="text-uppercase">Today's Menu</p>
       </div>
-      <div class="item">
+      <div class="item {{selectedTab == 2 ? 'active': ''}}">
         <div class="logo">
           <img src="assets/icons/bulk.png" height="50px" width="130px">
         </div>
         <p class="text-uppercase">Team Order</p>
       </div>
-      <div class="item">
+      <div class="item {{selectedTab == 3 ? 'active': ''}}">
         <div class="logo">
           <img src="assets/icons/barcode.png" height="45px" width="50px">
         </div>

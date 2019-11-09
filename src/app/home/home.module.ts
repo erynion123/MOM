@@ -10,7 +10,8 @@ import { PriceComponent } from './price/price.component';
 import { TeamComponent } from './team/team.component';
 import { SubsComponent } from './subs/subs.component';
 import { TabsModule } from 'ngx-bootstrap/tabs';
-import { HeaderComponent } from '../shared/components/header/header.component';
+import { AccountComponent } from './account/account.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -20,14 +21,15 @@ import { HeaderComponent } from '../shared/components/header/header.component';
     PriceComponent,
     TeamComponent,
     SubsComponent,
-    HeaderComponent
+    AccountComponent
   ],
   imports: [
     HomeRoutingModule,
     FormsModule,
     CommonModule,
     CarouselModule.forRoot(),
-    TabsModule.forRoot()
+    TabsModule.forRoot(),
+    SharedModule
   ],
   providers: [],
   bootstrap: [HomeComponent]

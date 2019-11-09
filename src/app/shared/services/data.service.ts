@@ -14,7 +14,7 @@ import { map, catchError } from 'rxjs/operators';
 export class DataService {
   noInternetConnectivity: boolean = false;
   static counter: number = 0;
-  private baseUrl: string = "https://cuddly-meal.herokuapp.com";
+  private baseUrl: string = "http://192.168.31.179:3000";
   private token: string = null;
   httpOptions = {
   headers: new HttpHeaders({
@@ -167,5 +167,30 @@ export class DataService {
       .pipe(catchError((error:any,obs) => this.handleError(error,obs)))
       // .finally(() => { this.spinner.hide() });
   } // patch
+
+
+  gmailLogin(){
+    console.log('yaha');
+    let url = "https://accounts.google.com/o/oauth2/v2/auth?client_id=460667822792-guht50p6751edt9bcmp5mhb7cqj3d2eh.apps.googleusercontent.com&response_type=code&openid%20email";
+    let options = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+        'Authorization': 'my-auth-token'
+      })
+    };
+    // let data = {
+    //   client_id: "460667822792-guht50p6751edt9bcmp5mhb7cqj3d2eh.apps.googleusercontent.com",
+    //   response_type: "code",
+    //   scope: "openid%20email"
+    // }
+    return this.http
+      .get(url,options)
+      .pipe(map(
+        (res: any) => {
+          // this.spinner.hide();
+          console.log(this.extractData(res));
+        }))
+      .pipe(catchError((error:any,obs) => this.handleError(error,obs)))
+  }
 
 }

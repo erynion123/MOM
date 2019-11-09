@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/shared/services/data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -8,7 +9,10 @@ import { DataService } from 'src/app/shared/services/data.service';
 export class MenuComponent implements OnInit {
   menus: any;
   type:any;
-  constructor(private dataService: DataService) { }
+  constructor(
+    private dataService: DataService,
+    private router: Router,
+  ) { }
 
   ngOnInit() {
     this.getMenu();
@@ -21,6 +25,10 @@ export class MenuComponent implements OnInit {
       console.log(data);
       this.menus = data;
     });
+  }
+
+  checkout(){
+    this.router.navigate(['checkout']);
   }
 
 }
