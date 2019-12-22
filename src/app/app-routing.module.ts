@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { MenuComponent } from './menu/menu.component';
 
 
 const routes: Routes = [
@@ -9,11 +10,15 @@ const routes: Routes = [
     loadChildren: './home/home.module#HomeModule'
   },
   {
-    path:'checkout',
+    path: 'menu',
+    component: MenuComponent
+  },
+  {
+    path: 'checkout',
     component: CheckoutComponent
   },
   {
-    path:'',
+    path: '',
     pathMatch: 'full',
     redirectTo: '/home'
   }

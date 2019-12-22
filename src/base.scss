@@ -1,3 +1,42 @@
 body{
   font-family: ProximaNova,Arial,Helvetica Neue,sans-serif;
 }
+
+.sign-in-modal{
+  width: 380px;
+  .sign-in-title{
+    text-align: center;
+  }
+  .close{
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+  .sign-in-full-width{
+    width: 100%;
+  }
+  .otp-field{
+    width: 100%;
+    .mat-form-field-wrapper{
+      width: 150px;
+    }
+  }
+  .send-otp{
+    width: 100%;
+    background: green;
+    color: #fff;
+  }
+  .or-divider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    &::after, &::before{
+      content: "";
+      width: 100px;
+      border: 1px solid #5c5c5c;
+      margin: 0 10px;
+      display: block;
+    }
+  }
+}

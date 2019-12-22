@@ -14,7 +14,7 @@ import { map, catchError } from 'rxjs/operators';
 export class DataService {
   noInternetConnectivity: boolean = false;
   static counter: number = 0;
-  private baseUrl: string = "http://192.168.31.179:3000";
+  private baseUrl: string = "https://cuddly-meal.herokuapp.com";
   private token: string = null;
   httpOptions = {
   headers: new HttpHeaders({
@@ -179,7 +179,7 @@ export class DataService {
       })
     };
     // let data = {
-    //   client_id: "460667822792-guht50p6751edt9bcmp5mhb7cqj3d2eh.apps.googleusercontent.com",
+    //   client_id: "460667822792-vrivoeg8nv3m8h32kaojgq8u246ehgbn.apps.googleusercontent.com",
     //   response_type: "code",
     //   scope: "openid%20email"
     // }

@@ -5,7 +5,7 @@ import { HomeComponent } from './home.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { FormsModule} from "@angular/forms";
 import { AboutComponent } from './about/about.component';
-import { MenuComponent } from './menu/menu.component';
+import { MenuComponent } from '../menu/menu.component';
 import { PriceComponent } from './price/price.component';
 import { TeamComponent } from './team/team.component';
 import { SubsComponent } from './subs/subs.component';

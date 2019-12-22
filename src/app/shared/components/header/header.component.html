@@ -1,26 +1,35 @@
 <div class="header-wrapper">
   <div class="header-container">
     <div class="delivering-to">
-      <h5>Delivering To: <span class="grey">Bangalore</span></h5>
+      <h5>Daily Eat - Kitchen</h5>
     </div>
     <div class="brand-logo">
-      <img src="assets/logo/mom-vector.png" alt="" height="80px" width="150px">
     </div>
     <div class="user">
+      <button type="button" name="button" (click)="goToMenu()">Menu</button>
       <button type="button" name="button" (click)="openModal(template)">Login</button>
     </div>
   </div>
 </div>
 
 <ng-template #template>
-  <div class="modal-header">
-    <h4 class="modal-title pull-left">Modal</h4>
+  <div class="modal-body">
+    <h4 class="sign-in-title">Sign In</h4>
     <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
       <span aria-hidden="true">&times;</span>
     </button>
-  </div>
-  <div class="modal-body">
-    <button (click)="fbLogin()">Fb login</button>
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <form class="sign-in-form">
+      <mat-form-field class="sign-in-full-width">
+        <span matPrefix>+91 &nbsp;</span>
+        <input type="tel" matInput placeholder="Mobile Number">
+      </mat-form-field>
+      <mat-form-field class="otp-field">
+        <input matInput placeholder="Otp" class="otp">
+      </mat-form-field>
+      <button mat-raised-button class="send-otp" (click)="$event.preventDefault();">Send Otp</button>
+    </form>
+    <span class="or-divider">Or</span>
+    <button (click)="signInWithFB()" class="fb-login-button">Continue with Facebook</button>
+    <button type="button" name="button" class="fb-login-button" (click)="signInWithGoogle()">Continue with Google</button>
   </div>
 </ng-template>

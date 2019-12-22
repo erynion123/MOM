@@ -12,6 +12,26 @@ import { IntroComponent } from './intro/intro.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { SharedModule } from './shared/shared.module';
 import { AngularTokenModule } from 'angular-token';
+import { SocialLoginModule, AuthServiceConfig } from "angularx-social-login";
+import { GoogleLoginProvider, FacebookLoginProvider } from "angularx-social-login";
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+
+let config = new AuthServiceConfig([
+  {
+    id: GoogleLoginProvider.PROVIDER_ID,
+    provider: new GoogleLoginProvider("460667822792-guht50p6751edt9bcmp5mhb7cqj3d2eh.apps.googleusercontent.com")
+  },
+  {
+    id: FacebookLoginProvider.PROVIDER_ID,
+    provider: new FacebookLoginProvider("659619851233129")
+  }
+]);
+
+export function provideConfig() {
+  return config;
+}
+
 
 @NgModule({
   declarations: [
@@ -30,10 +50,16 @@ import { AngularTokenModule } from 'angular-token';
     HomeModule,
     CarouselModule.forRoot(),
     HttpClientModule,
-    SharedModule
+    SharedModule,
+    SocialLoginModule,
+    BrowserAnimationsModule
   ],
   providers: [
     DataService,
+    {
+      provide: AuthServiceConfig,
+      useFactory: provideConfig
+    }
   ],
   bootstrap: [AppComponent]
 })

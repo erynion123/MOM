@@ -1,11 +1,10 @@
-<app-header></app-header>
 <div class="home-wrapper">
 
   <!-- Home carousel -->
 
   <carousel class="home-banners">
     <slide class="banner">
-      <div class="content" [ngStyle]="{'background-image': 'url(assets/banner/scene1.jpg)'}">
+    <div class="content" [ngStyle]="{'background-image': 'url(assets/banner/scene2.png)'}">
         <h1>Get 3 days trial pack at just Rs180, for first 100 customers everyday.</h1>
         <button type="button" class="text-uppercase">Try 3 days trail</button>
         <span>Choose one plan and order anything</span>
@@ -13,7 +12,128 @@
     </slide>
   </carousel>
 
-  <div class="home-body">
+  <div class="how-it-works">
+    <h3>How the subscription works</h3>
+
+    <div class="container">
+      <div class="step1">
+        <img src="assets/home/subscribtion.png">
+        <h2 class="title">Buy Plan</h2>
+        <p class="caption">Choose one plan and order anything with no extra cost</p>
+      </div>
+      <div class="step2">
+        <img src="assets/home/meal.png">
+        <h2 class="title">Select Meal</h2>
+        <p class="caption">Everyday chef designed menu including a balance meal, choice of cusine and top rated customer favorite</p>
+      </div>
+      <div class="step3">
+        <img src="assets/home/delivery.png">
+        <h2 class="title">Deliver</h2>
+        <p class="caption">Get timely deliver of tasty food</p>
+      </div>
+    </div>
+
+    <button class="menu-btn">Today's menu</button>
+
+  </div>
+
+  <div class="what-we-do container">
+    <div class="text-container">
+      <p class="heading">What do we actually cook?</p>
+      <p class="body">When you partner with us, it is not just yet another food delivery service but an experience of love and luxury. We just dont cook food, we create a culinary experience.</p>
+      <button>Best Plan For You</button>
+    </div>
+    <div class="img-container">
+
+    </div>
+  </div>
+
+  <div class="top-rated-meal container">
+    <h2>Our Top Rated Meal</h2>
+
+    <div class="meal-container">
+      <div class="meal col-sm">
+        <div class="img-container" [ngStyle]="{'background-image': 'url(assets/food/1.jpg)'}"></div>
+        <p class="meal-name">Butter chicken special</p>
+        <ul class="item-list">
+          <li class="item">Royal Chicken Gravy</li>
+          <li class="item">Mix Dal</li>
+          <li class="item">Roti</li>
+          <li class="item">Zeera Rice</li>
+        </ul>
+        <button class="order-now-btn">Order Now</button>
+      </div>
+
+      <div class="meal col-sm">
+        <div class="img-container" [ngStyle]="{'background-image': 'url(assets/food/1.jpg)'}"></div>
+        <p class="meal-name">Butter chicken special</p>
+        <ul class="item-list">
+          <li class="item">Royal Chicken Gravy</li>
+          <li class="item">Mix Dal</li>
+          <li class="item">Roti</li>
+          <li class="item">Zeera Rice</li>
+        </ul>
+        <button class="order-now-btn">Order Now</button>
+      </div>
+
+      <div class="meal col-sm">
+        <div class="img-container" [ngStyle]="{'background-image': 'url(assets/food/1.jpg)'}"></div>
+        <p class="meal-name">Butter chicken special</p>
+        <ul class="item-list">
+          <li class="item">Royal Chicken Gravy</li>
+          <li class="item">Mix Dal</li>
+          <li class="item">Roti</li>
+          <li class="item">Zeera Rice</li>
+        </ul>
+        <button class="order-now-btn">Order Now</button>
+      </div>
+
+      <div class="meal col-sm">
+        <div class="img-container" [ngStyle]="{'background-image': 'url(assets/food/1.jpg)'}"></div>
+        <p class="meal-name">Butter chicken special</p>
+        <ul class="item-list">
+          <li class="item">Royal Chicken Gravy</li>
+          <li class="item">Mix Dal</li>
+          <li class="item">Roti</li>
+          <li class="item">Zeera Rice</li>
+        </ul>
+        <button class="order-now-btn">Order Now</button>
+      </div>
+      
+    </div>
+
+  </div>
+
+  <div class="promo container">
+    <h2>Why us over 2000 food joint in bangalore ?</h2>
+    <div class="images">
+        <div class="img-container col-sm" [ngStyle]="{'background-image': 'url(assets/home/order.png)'}">
+        </div>
+        <div class="img-container col-sm" [ngStyle]="{'background-image': 'url(assets/home/kitchen.jpg)'}">
+        </div>
+    </div>
+  </div>
+
+  <div class="our-team container">
+    <h2 class="text-center">Our Team</h2>
+    <carousel class="team-details">
+      <slide class="member">
+        <div class="member-wrapper">
+          <div class="img" [ngStyle]="{'background-image': 'url(assets/home/order.png)'}"></div>
+          <div class="text">
+            <span class="name">Chef Rohit</span>
+            <p class="desc">
+              Meet Rohit, an international level chef who rather prefers to be a artist who crafts each bite you eat with 
+              love and patience. Being a successful chef for brands like ITC, Shangri-la and Hilton, he is some who wishes to create
+              your eating experience 5-star level everyday.
+            </p>
+          </div>
+        </div>
+      </slide>
+    </carousel>
+  </div>
+
+  <!-- <div class="home-body">
 
     <div class="tab-menu">
       <div class="item {{selectedTab == 0 ? 'active': ''}}" (click)="goToSubs()">
@@ -41,10 +161,10 @@
         <p class="text-uppercase">Pricing</p>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- Load view here -->
-  <router-outlet></router-outlet>
+  <!-- <router-outlet></router-outlet> -->
   <!-- Load view here -->
 
 </div>

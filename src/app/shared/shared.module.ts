@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { ModalModule } from 'ngx-bootstrap';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -9,9 +11,11 @@ import { ModalModule } from 'ngx-bootstrap';
   ],
   imports: [
     CommonModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    MatInputModule,
+    MatButtonModule
   ],
-  exports:[
+  exports: [
     HeaderComponent
   ],
   providers: []
