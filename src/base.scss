@@ -25,6 +25,7 @@ body{
     width: 100%;
     background: green;
     color: #fff;
+    outline: none;
   }
   .or-divider{
     display: flex;
@@ -38,5 +39,31 @@ body{
       margin: 0 10px;
       display: block;
     }
+  }
+
+  .fb-login-btn, .google-login-btn{
+    width: 100%;
+    height: 40px;
+    border: 2px solid;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    outline: none;
+  }
+
+  .fb-login-btn{
+    border-color: #4266b2;
+    color: #4266b2;
+  }
+
+  .google-login-btn{
+    border-color: #eb4235;
+    color:#eb4235;
+  }
+
+  .mat-form-field.mat-focused .mat-form-field-ripple{
+    background-color:green;
+  }
+  .mat-form-field.mat-focused .mat-form-field-label{
+    color: green;
   }
 }

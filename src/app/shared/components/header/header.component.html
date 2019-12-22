@@ -23,13 +23,13 @@
         <span matPrefix>+91 &nbsp;</span>
         <input type="tel" matInput placeholder="Mobile Number">
       </mat-form-field>
-      <mat-form-field class="otp-field">
+      <mat-form-field class="otp-field" [hidden]="!otpSent">
         <input matInput placeholder="Otp" class="otp">
       </mat-form-field>
       <button mat-raised-button class="send-otp" (click)="$event.preventDefault();">Send Otp</button>
     </form>
     <span class="or-divider">Or</span>
-    <button (click)="signInWithFB()" class="fb-login-button">Continue with Facebook</button>
-    <button type="button" name="button" class="fb-login-button" (click)="signInWithGoogle()">Continue with Google</button>
+    <button (click)="signInWithFB()" class="fb-login-btn">Continue with Facebook</button>
+    <button type="button" name="button" class="google-login-btn" (click)="signInWithGoogle()">Continue with Google</button>
   </div>
 </ng-template>

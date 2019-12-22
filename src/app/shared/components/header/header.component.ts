@@ -3,6 +3,7 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { DataService } from '../../services/data.service';
 import { AuthService } from 'angularx-social-login';
 import { FacebookLoginProvider, GoogleLoginProvider } from 'angularx-social-login';
+import { Router } from '@angular/router';
 // declare let gapi: any;
 
 @Component({
@@ -14,10 +15,12 @@ export class HeaderComponent implements OnInit {
   modalRef: BsModalRef;
   user: any;
   loggedIn: boolean;
+  otpSent;
   constructor(
     private modalService: BsModalService,
     private dataService: DataService,
-    private authService: AuthService
+    private authService: AuthService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -26,6 +29,10 @@ export class HeaderComponent implements OnInit {
       this.loggedIn = (user != null);
       console.log(this.user);
     });
+  }
+
+  goToMenu() {
+    this.router.navigateByUrl('/menu');
   }
 
 
